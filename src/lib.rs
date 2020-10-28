@@ -8,12 +8,13 @@ mod print;
 pub mod lang_items;
 
 #[no_mangle]
+pub fn cleanup_module() {
+    println!("Module exit.");
+}
+
+#[no_mangle]
 pub fn init_module() -> i32 {
     println!("Module initialized.");
     return 0;
 }
 
-#[no_mangle]
-pub fn cleanup_module() {
-    println!("Module exit.");
-}

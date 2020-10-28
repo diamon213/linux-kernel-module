@@ -2,15 +2,14 @@
 use core;
 
 #[no_mangle]
-#[lang = "eh_personality"]
-
-pub extern "C" fn rust_eh_personality() {}
-
-#[no_mangle]
 #[lang = "eh_unwind_resume"]
 
 pub extern "C" fn rust_eh_unwind_resume() {}
 
+#[no_mangle]
+#[lang = "eh_personality"]
+
+pub extern "C" fn rust_eh_personality() {}
 #[no_mangle]
 #[lang = "panic_impl"]
 
